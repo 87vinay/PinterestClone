@@ -1,0 +1,99 @@
+.home-page {
+  padding-top: 75px;
+  text-align: center;
+}
+.image-container{
+  position: relative;
+  overflow: hidden;
+}
+.save-button {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  background-color: #cc0000;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 14px; 
+  border: none;
+  cursor: pointer;
+  display: none; 
+  transition: all 0.3s ease;
+}
+.image-container:hover .save-button {
+  display: block;
+}
+.masonry-container {
+  margin: 0 auto;
+  padding: 10px;
+}
+.masonry-grid {
+  display: flex;
+  margin-left: -14px;
+  width: auto;
+}
+.masonry-grid-column {
+  padding-left: 15px; 
+  background-clip: padding-box;
+}
+.masonry-grid img {
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.masonry-grid img:hover{
+  filter: grayscale(10%) brightness(60%);
+}
+.icon-container {
+  position: absolute;
+  bottom: 15px;
+  right: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  display: none; 
+}
+.icon-wrapper {
+  background: white;
+  width: 24px;
+  height: 24px;
+}
+.icon {
+  color: black;
+  font-size: 18px;
+  position: relative;
+  left: 9px;
+}
+.image-container:hover .save-button,
+.image-container:hover .icon-container {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .save-button {
+    font-size: 15px; 
+    padding: 4px 8px;
+  }
+  .icon-wrapper {
+    width: 20px;
+    height: 20px;
+  }
+  .icon {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .save-button {
+    font-size: 12px; 
+    padding: 4px 6px;
+  }
+  .icon-wrapper {
+    width: 15px;
+    height: 15px;
+  }
+  .icon {
+    font-size: 10px;
+  }
+}

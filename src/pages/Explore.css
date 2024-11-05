@@ -1,0 +1,142 @@
+.explore-page {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.date-display {
+  font-size: 1.2rem;
+  color: gray;
+  text-align: center;
+  margin-top: 100px;
+}
+.stay-inspired {
+  font-size: 2.5rem;
+  margin-top: 5px;
+  color: #333;
+}
+.explore-grid {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+.card {
+  position: relative;
+  width: 36%;
+  height: 300px;
+  border-radius: 25px; 
+  overflow: hidden;
+  background-color: #f0f0f0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+.card-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2; 
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); 
+  border-radius: 15px; 
+  z-index: 1; 
+}
+.center-card {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px; 
+}
+@media (max-width: 800px) {
+  .card {
+    width: 100%; 
+    height: 350px; 
+  }
+}
+.inspiration-footer {
+  text-align: center; 
+  margin-top: 100px; 
+}
+.inspiration-footer h2 {
+  font-weight:lighter;
+  color: black;
+  font-size: 1.1rem; 
+  margin: 5px 0; 
+}
+.inspiration-footer p{
+  font-size: 1.2rem;
+  margin: 4px 0;
+}
+.tick-icon-container {
+  background-color: black; 
+  border-radius: 50%; 
+  display: inline-block; 
+  padding: 4px 5px; 
+}
+.tick-icon {
+  font-size: 40px; 
+  color: white; 
+}
+.go-home-button {
+  background-color: lightgray; 
+  border: none; 
+  border-radius: 20px; 
+  padding: 10px 20px;
+  font-size: 1rem; 
+  cursor: pointer; 
+  margin-top: 20px; 
+  margin-bottom: 40px;
+}
+.question-mark {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  width: 50px; 
+  height: 50px; 
+  background-color: white; 
+  color: black; 
+  font-size: 24px; 
+  font-weight: 750;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.tooltip {
+  font-size: 15px;
+  display: none; 
+  position: absolute; 
+  bottom: 50px; 
+  right: 50%; 
+  transform: translateX(50%); 
+  background-color: black; 
+  color: white;
+  padding: 5px 10px; 
+  border-radius: 4px; 
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.question-mark:hover .tooltip {
+  display: block; 
+}

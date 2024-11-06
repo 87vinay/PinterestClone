@@ -2,22 +2,22 @@
   padding-top: 75px;
   text-align: center;
 }
-.image-container{
+.image-container {
   position: relative;
   overflow: hidden;
 }
 .save-button {
   position: absolute;
-  top: 10px; 
+  top: 10px;
   right: 10px;
   background-color: #cc0000;
   color: white;
   border-radius: 20px;
   padding: 10px 10px;
-  font-size: 14px; 
+  font-size: 14px;
   border: none;
   cursor: pointer;
-  display: none; 
+  display: none;
   transition: all 0.3s ease;
 }
 .image-container:hover .save-button {
@@ -33,7 +33,7 @@
   width: auto;
 }
 .masonry-grid-column {
-  padding-left: 15px; 
+  padding-left: 15px;
   background-clip: padding-box;
 }
 .masonry-grid img {
@@ -43,7 +43,7 @@
   border-radius: 15px;
   transition: all 0.3s ease;
 }
-.masonry-grid img:hover{
+.masonry-grid img:hover {
   filter: grayscale(10%) brightness(60%);
 }
 .icon-container {
@@ -54,7 +54,7 @@
   flex-direction: row;
   align-items: center;
   gap: 6px;
-  display: none; 
+  display: none;
 }
 .icon-wrapper {
   background: white;
@@ -73,7 +73,7 @@
 }
 @media (max-width: 800px) {
   .save-button {
-    font-size: 15px; 
+    font-size: 15px;
     padding: 4px 8px;
   }
   .icon-wrapper {
@@ -86,7 +86,7 @@
 }
 @media (max-width: 500px) {
   .save-button {
-    font-size: 12px; 
+    font-size: 12px;
     padding: 4px 6px;
   }
   .icon-wrapper {
@@ -95,5 +95,40 @@
   }
   .icon {
     font-size: 10px;
+  }
+}
+.category-buttons{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+.category-buttons button {
+  background-color: #243642;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.category-buttons button:hover {
+  background-color: #1E3E62;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+.category-buttons button:focus {
+  outline: none;
+}
+.category-buttons button:active {
+  transform: translateY(0px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 700px) {
+  .category-buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
   }
 }

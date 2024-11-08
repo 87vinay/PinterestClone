@@ -23,13 +23,22 @@ const Navbar = () => {
       <div className="navbar-left">
         <PinterestIcon className="navbar-logo" />
         <ul className="navbar-links">
-          <NavLink to={"/"} activeClassName="active">
+          <NavLink
+            to={"/"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <li className="set-link">Home</li>
           </NavLink>
-          <NavLink to={"/explore"} activeClassName="active">
+          <NavLink
+            to={"/explore"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <li className="nav-link">Explore</li>
           </NavLink>
-          <NavLink to={"create"} activeClassName="active">
+          <NavLink
+            to={"create"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <li className="nav-link">Create</li>
           </NavLink>
         </ul>
@@ -50,7 +59,12 @@ const Navbar = () => {
         <NotificationsIcon className="icon" />
         <MessageIcon className="icon" />
         <BookmarkIcon className="icon" />
-        <div className="navbar-link">Saved</div>
+        <NavLink
+          to={"saved"}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          <li className="nav-link">Saved</li>
+        </NavLink>
       </div>
     </nav>
   );

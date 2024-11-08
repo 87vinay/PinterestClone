@@ -1,3 +1,8 @@
+.navbar a, .navbar a:visited{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
 .navbar {
   background-color: #ffffff;
   color: #111;

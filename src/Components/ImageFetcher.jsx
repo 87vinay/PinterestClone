@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import Masonry from "react-masonry-css";
+import { SavedContext } from "../Context/SavedContext";
 
 const ImageFetcher = () => {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("fashion");
+  const {addImageToSaved} = useContext(SavedContext);
 
   const fetchImages = async () => {
     const response = await axios.get(
@@ -20,6 +22,10 @@ const ImageFetcher = () => {
   useEffect(() => {
     fetchImages();
   }, [page, query]);
+
+  const handleSave = (image)=>{
+    addImageToSaved(image);
+  }
 
   const handleCategoryChange = (Category) => {
     setQuery(Category);
@@ -61,7 +67,7 @@ const ImageFetcher = () => {
                   alt={image.alt_description}
                   style={{ width: "100%", borderRadius: "15px" }}
                 />
-                <button className="save-button">Save</button>
+                <button className="save-button" onClick={()=> handleSave(image)}>Save</button>
                 <div className="icon-container">
                   <div className="icon-wrapper">
                     <UpgradeIcon className="icon" />

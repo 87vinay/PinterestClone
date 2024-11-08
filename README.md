@@ -1,7 +1,2 @@
 # PinterestClone
-# The Pinterest Clone is a responsive web application that mimics the core functionality of Pinterest, allowing users to browse visual content. This project was developed using the following technologies:
-React: The primary library for building the user interface, allowing for component-based architecture and state management.
-Material-UI (MUI): A library of React components that follows Google's Material Design guidelines, enhancing the aesthetic and usability of the application.
-CSS: Used for custom styling, creating a visually appealing layout and ensuring responsiveness across various devices.
-Axios: For making API requests to fetch images, ensuring that the app can load external data dynamically.
-Infinite Scroll: Implemented to provide a seamless browsing experience, allowing users to load more images as they scroll down the page without manual pagination.
+# This project is a Pinterest-inspired web app built using ReactJS, Unsplash API, and Material UI. It allows users to browse and save images from various categories in a masonry grid layout. Users can click on images to save them, with the saved images displayed on a dedicated Saved page, which persists through local storage. The project also includes infinite scrolling on the homepage, a responsive design, and the ability to delete images from the saved collection. The app features category-based image filtering and a clean, user-friendly interface.
